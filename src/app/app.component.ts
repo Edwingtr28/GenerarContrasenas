@@ -16,8 +16,9 @@ export class AppComponent implements OnInit {
   {
     //validaciones del form 
     this.formContrasena = this.fb.group({
-    number: ['', Validators.required],
-    correo: ['', [Validators.required, Validators.email]],
+    cant: ['', Validators.required],
+    numbers: ['', [Validators.required]],
+    charspecials: ['', [Validators.required]],
   });}
 
   ngOnInit(): void {
@@ -28,7 +29,7 @@ export class AppComponent implements OnInit {
   //funcion que se llama por medio del boton
   generatepassword() {
     //tamaño de la contrasena
-    const lengthPassword = this.formContrasena.value.number;
+    const lengthPassword = this.formContrasena.value.cant;
     //opcion de numeros
     const ExcludeNumbers = false;
     //opcion de caracteres especiales
