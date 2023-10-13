@@ -1,16 +1,26 @@
 <h1>Iniciando</h1>
-<div>
-  <h4>Digite la cantidad de caracteres que desea que tnega la contrasena</h4>
-  <input id="Cantlegnt" type="number">
-</div>
-<div>
-  <h4>Dese que contenga numeros</h4>
-  <input id="number" type="text">
-</div>
-<div>
-  <h4>Desea que contenga caracteres especiales</h4>
-  <input id="caracteres" type="text">
-</div>
-<div>
-  <button type="submit" (click)="generatepassword()"> generar contrasena</button>
+
+<!--form de para obtener la contrasena-->
+<form [formGroup]="formContrasena" (ngSubmit)="generatepassword()">
+  <label>
+    Digite la cantidad de caracteres que desea que tnega la contrasena:
+    <input type="number" formControlName="number" />
+  </label>
+
+  <label>
+    Dese que contenga numeros:
+    <input type="text"  />
+  </label>
+
+  <label>
+    Desea que contenga caracteres especiales:
+    <input type="text" />
+  </label>
+
+  <button type="submit" >Enviar</button>
+</form>
+
+<!--valida si la contrasena esta vacio para mostrar el mensaje-->
+<div *ngIf="Contrasena != ''">
+  <h3>la contrasena es: <span>{{Contrasena}}</span></h3>
 </div>

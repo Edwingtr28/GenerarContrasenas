@@ -12,10 +12,12 @@ export class ServicesService {
 
   constructor(private http: HttpClient) { }
 
-  getPass(length: string): Observable<any> {
-    const url = `${this.apiUrl}?length=${length}`;
-    const headers = new HttpHeaders().set('X-Api-Key', this.apiKey);
+  getPass(length: number, number: boolean, special: boolean): Observable<any> {
 
+    const url = `${this.apiUrl}?length=${length}?exclude_numbers=${number}?exclude_special_chars=${special}`;
+    const headers = new HttpHeaders().set('X-Api-Key', this.apiKey);
+    console.log("result", this.http.get(url, { headers }));
     return this.http.get(url, { headers });
+    
   }
 }
