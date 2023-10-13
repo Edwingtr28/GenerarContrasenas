@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ServicesService } from './Servicios/services.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -26,6 +27,7 @@ export class AppComponent implements OnInit {
   //variables de los toogles
   toogleNumbers = false;
   toogleSpecials = false;
+  
 
   ngOnInit(): void {
     

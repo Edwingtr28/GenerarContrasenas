@@ -58,8 +58,14 @@
     margin-right: 5px;
   }
   
+  .button-class:disabled {
+    background-color: #ccc; /* Color de fondo cuando está deshabilitado */
+    color: #666; /* Color del texto cuando está deshabilitado */
+  }
+
   .mat-form-field {
     width: 100%;
   }
+  
   
   
