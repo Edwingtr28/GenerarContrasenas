@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicesService } from './Servicios/services.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialog} from '@angular/material/dialog';
 
 
 @Component({
@@ -11,9 +12,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AppComponent implements OnInit {
   title = 'GenerarContrasenas';
   formContrasena: FormGroup;
+  mostrarModal = false;
+
 
   //llamamos el servicio en el constructor
-  constructor(private Services: ServicesService, private fb: FormBuilder) 
+  constructor(private Services: ServicesService, private fb: FormBuilder, public dialog: MatDialog) 
   {
     //validaciones del form 
     this.formContrasena = this.fb.group({
@@ -52,6 +55,7 @@ export class AppComponent implements OnInit {
           // busca random_password en el json
           let randomPassword = result['random_password'];
           this.Contrasena = randomPassword;
+          this.abrirModal();
           
         } else {
           console.error('La propiedad "random_password" no está presente en la respuesta de la API.');
@@ -63,4 +67,11 @@ export class AppComponent implements OnInit {
     );
   }
   
+  abrirModal(): void {
+    this.mostrarModal = true;
+  }
+
+  cerrarModal(): void {
+    this.mostrarModal = false;
+  }
 }

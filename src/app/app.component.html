@@ -32,3 +32,13 @@
 </div>
 
 
+<!-- Contenido del modal -->
+<ng-container *ngIf="mostrarModal">
+  <div class="modal-container">
+    <h2>Su contraseña es:</h2>
+    <span>{{Contrasena}}</span>
+    <div>
+      <button class="button-classModal" (click)="cerrarModal()">Cerrar</button>
+    </div>
+  </div>
+</ng-container>
