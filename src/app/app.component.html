@@ -1,30 +1,26 @@
 <!--form de para obtener la contrasena-->
 <div class="container">
-  <h1>Generador de contraseñas</h1>
+  <h1 class="generate">
+    <strong>Generador de Contraseñas</strong>
+  </h1>
 
   <form [formGroup]="formContrasena" (ngSubmit)="generatepassword()">
-    <!--<label>
-      Digite la cantidad de caracteres que desea que tnega la contrasena:
-      <input type="number" formControlName="cant" />
-    </label-->
     <div class="form-floating mb-3">
       <input formControlName="cant" type="number" class="form-control" id="floatingInput" >
       <label for="floatingInput"> Digite la cantidad de caracteres que desea que tenga la contrasena:</label>
     </div>
 
-    <div>
-    <label>
-      Desea que excluir numeros:
-      <mat-slide-toggle formControlName="numbers"></mat-slide-toggle>
-    </label>
+    <div class="container-text">
+    <label class="adjustable-text">Desea que excluir numeros:</label>
+    <mat-slide-toggle color="primary" formControlName="numbers"></mat-slide-toggle>
+    
+
+    <label class="adjustable-text">Desea que excluir caracteres especiales:</label>
+    <mat-slide-toggle color="primary" formControlName="charspecials"></mat-slide-toggle>
+    
   </div>
-  <div>
-    <label>
-      Desea que excluir caracteres especiales:
-      <mat-slide-toggle formControlName="charspecials"></mat-slide-toggle>
-    </label>
-  </div>
-    <button class="btn btn-secondary" type="submit" [disabled]="formContrasena.invalid" >Enviar</button>
+    <button class="btn-contact" type="submit" [disabled]="formContrasena.invalid" >Enviar</button>
+    <button class="boton-redondo"> generar</button>
   </form>
 
   <!--valida si la contrasena esta vacio para mostrar el mensaje-->
