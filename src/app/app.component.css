@@ -35,7 +35,7 @@
     margin: 0 auto; /* Centrar el texto horizontalmente */
   }
   
-  .boton-redondo {
+  .button-class {
     width: 50px; /* Puedes ajustar el tamaño según tus necesidades */
     height: 50px; /* Asegúrate de que la altura sea igual al ancho para que sea un círculo */
     border-radius: 50%; /* Establece las esquinas redondeadas al 50% para hacer un círculo */
