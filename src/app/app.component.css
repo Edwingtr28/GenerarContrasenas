@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Establece la altura del componente al 100% de la altura de la ventana */
+  }
+  
+  .container {
+    background-color: white;
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+    border: 4px solid #002758;
+    border-radius: 10px;
+    /* Otros estilos que desees aplicar */
+  }
+  
+  
+  
+  
+  
+  

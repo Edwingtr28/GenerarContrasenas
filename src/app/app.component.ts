@@ -17,12 +17,15 @@ export class AppComponent implements OnInit {
     //validaciones del form 
     this.formContrasena = this.fb.group({
     cant: ['', Validators.required],
-    numbers: ['', [Validators.required]],
-    charspecials: ['', [Validators.required]],
+    numbers: [''],
+    charspecials: [''],
   });
 
   }
-  toogleNumbers = true;
+
+  //variables de los toogles
+  toogleNumbers = false;
+  toogleSpecials = false;
 
   ngOnInit(): void {
     
@@ -37,9 +40,9 @@ export class AppComponent implements OnInit {
     this.toogleNumbers = this.formContrasena.value.numbers;
     console.log("se llamo number:", this.toogleNumbers);
     //opcion de caracteres especiales
-    const SpecialChars = false;
+    this.toogleSpecials = this.formContrasena.value.charspecials;
     //llamado del servicio que llama a la API
-    this.Services.getPass(lengthPassword,this.toogleNumbers, SpecialChars ).subscribe(
+    this.Services.getPass(lengthPassword,this.toogleNumbers, this.toogleSpecials ).subscribe(
       (result) => {
         console.log(result);
         //aqui obtenemos la respuesta y buscamos la clave para guardarlo en la variable contrasena y mostrarlo en html
