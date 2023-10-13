@@ -55,7 +55,7 @@ export class AppComponent implements OnInit {
           // busca random_password en el json
           let randomPassword = result['random_password'];
           this.Contrasena = randomPassword;
-          this.abrirModal();
+          this.openModal();
           
         } else {
           console.error('La propiedad "random_password" no está presente en la respuesta de la API.');
@@ -67,11 +67,11 @@ export class AppComponent implements OnInit {
     );
   }
   
-  abrirModal(): void {
+  openModal(): void {
     this.mostrarModal = true;
   }
 
-  cerrarModal(): void {
+  closeModal(): void {
     this.mostrarModal = false;
   }
 }

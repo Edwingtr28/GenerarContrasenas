@@ -25,20 +25,21 @@
     <button class="button-class" type="submit" [disabled]="formContrasena.invalid"> Generar</button>
   </form>
 
-  <!--valida si la contrasena esta vacio para mostrar el mensaje-->
+  <!--valida si la contrasena esta vacio para mostrar el mensaje
   <div *ngIf="Contrasena != ''">
     <h3>la contrasena es: <span>{{Contrasena}}</span></h3>
-  </div>
+  </div>-->
 </div>
 
 
 <!-- Contenido del modal -->
 <ng-container *ngIf="mostrarModal">
   <div class="modal-container">
-    <h2>Su contraseña es:</h2>
-    <span>{{Contrasena}}</span>
+    <div class="container-text">
+      <h2>Su contraseña es: <span>{{Contrasena}}</span></h2>
+      </div>
     <div>
-      <button class="button-classModal" (click)="cerrarModal()">Cerrar</button>
+      <button class="button-classModal" (click)="closeModal()">Cerrar</button>
     </div>
   </div>
 </ng-container>
