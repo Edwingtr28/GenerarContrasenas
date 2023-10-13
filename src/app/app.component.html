@@ -4,17 +4,17 @@
 <form [formGroup]="formContrasena" (ngSubmit)="generatepassword()">
   <label>
     Digite la cantidad de caracteres que desea que tnega la contrasena:
-    <input type="number" formControlName="number" />
+    <input type="number" formControlName="cant" />
   </label>
 
   <label>
     Dese que contenga numeros:
-    <input type="text"  />
+    <input type="text" formControlName="numbers"/>
   </label>
 
   <label>
     Desea que contenga caracteres especiales:
-    <input type="text" />
+    <input type="text" formControlName="charspecials" />
   </label>
 
   <button type="submit" >Enviar</button>

@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   {
     //validaciones del form 
     this.formContrasena = this.fb.group({
-   // number: ['', Validators.required],
+    number: ['', Validators.required],
     correo: ['', [Validators.required, Validators.email]],
   });}
 
@@ -25,21 +25,19 @@ export class AppComponent implements OnInit {
   }
 
   Contrasena: string = "";
-  lengthPassword: number = 5;
   //funcion que se llama por medio del boton
   generatepassword() {
     //tamaño de la contrasena
-    //const lengthPassword = this.formContrasena.value.number;
-    console.log("result", this.lengthPassword);
+    const lengthPassword = this.formContrasena.value.number;
     //opcion de numeros
-    const ExcludeNumbers = true;
+    const ExcludeNumbers = false;
     //opcion de caracteres especiales
-    const SpecialChars = true;
+    const SpecialChars = false;
     //llamado del servicio que llama a la API
-    this.Services.getPass(this.lengthPassword,ExcludeNumbers, SpecialChars ).subscribe(
+    this.Services.getPass(lengthPassword,ExcludeNumbers, SpecialChars ).subscribe(
       (result) => {
         console.log(result);
-        //aqui buscamos la clave para guardarlo en la variable contrasena y mostrarlo en html
+        //aqui obtenemos la respuesta y buscamos la clave para guardarlo en la variable contrasena y mostrarlo en html
         if ('random_password' in result) {
           // busca random_password en el json
           let randomPassword = result['random_password'];
