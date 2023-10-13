@@ -7,15 +7,17 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ServicesService {
 
-  private apiUrl = 'https://api.api-ninjas.com/v1/passwordgenerator';
-  private apiKey = '7jOopObxQQGIN7DfjwRDJA==ZFqrj6BH8ydPMYRW';
+  private apiUrl = 'https://api.api-ninjas.com/v1/passwordgenerator'; //direccion de la API
+  private apiKey = '7jOopObxQQGIN7DfjwRDJA==ZFqrj6BH8ydPMYRW'; //Codigo secreto
 
   constructor(private http: HttpClient) { }
 
-  getPass(length: string): Observable<any> {
-    const url = `${this.apiUrl}?length=${length}`;
+  getPass(length: string, number: boolean, special: boolean): Observable<any> {
+    //const url = `https://api.api-ninjas.com/v1/passwordgenerator?length=5&exclude_numbers=false`;
+    // se forma por completo la direccion con los parametros
+    const url = `${this.apiUrl}?length=${length}&exclude_numbers=${number}&exclude_special_chars=${special}`;
     const headers = new HttpHeaders().set('X-Api-Key', this.apiKey);
-
-    return this.http.get(url, { headers });
+    //retorna la contraseña generada
+    return this.http.get(url, { headers });    
   }
 }
