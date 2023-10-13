@@ -6,17 +6,18 @@
     Digite la cantidad de caracteres que desea que tnega la contrasena:
     <input type="number" formControlName="cant" />
   </label>
-
+  <div>
   <label>
-    Dese que contenga numeros:
-    <input type="text" formControlName="numbers"/>
+    Desea que contenga numeros:
+    <mat-slide-toggle formControlName="numbers"></mat-slide-toggle>
   </label>
-
+</div>
+<div>
   <label>
     Desea que contenga caracteres especiales:
-    <input type="text" formControlName="charspecials" />
+    <mat-slide-toggle formControlName="charspecials"></mat-slide-toggle>
   </label>
-
+</div>
   <button type="submit" >Enviar</button>
 </form>
 

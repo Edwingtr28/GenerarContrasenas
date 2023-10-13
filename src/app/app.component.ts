@@ -19,7 +19,10 @@ export class AppComponent implements OnInit {
     cant: ['', Validators.required],
     numbers: ['', [Validators.required]],
     charspecials: ['', [Validators.required]],
-  });}
+  });
+
+  }
+  toogleNumbers = true;
 
   ngOnInit(): void {
     
@@ -31,11 +34,12 @@ export class AppComponent implements OnInit {
     //tamaño de la contrasena
     const lengthPassword = this.formContrasena.value.cant;
     //opcion de numeros
-    const ExcludeNumbers = false;
+    this.toogleNumbers = this.formContrasena.value.numbers;
+    console.log("se llamo number:", this.toogleNumbers);
     //opcion de caracteres especiales
     const SpecialChars = false;
     //llamado del servicio que llama a la API
-    this.Services.getPass(lengthPassword,ExcludeNumbers, SpecialChars ).subscribe(
+    this.Services.getPass(lengthPassword,this.toogleNumbers, SpecialChars ).subscribe(
       (result) => {
         console.log(result);
         //aqui obtenemos la respuesta y buscamos la clave para guardarlo en la variable contrasena y mostrarlo en html
