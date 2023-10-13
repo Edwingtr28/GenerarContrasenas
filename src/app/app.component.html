@@ -5,10 +5,11 @@
   </h1>
 
   <form [formGroup]="formContrasena" (ngSubmit)="generatepassword()">
-    <div class="form-floating mb-3">
-      <input formControlName="cant" type="number" class="form-control" id="floatingInput" >
-      <label for="floatingInput"> Digite la cantidad de caracteres que desea que tenga la contrasena:</label>
-    </div>
+    <mat-form-field class="mat-form-field" appearance="outline"> <!--esto es de la pagina de mat-angular -->
+      <mat-label>Digite la cantidad de caracteres que desea que tenga la contrasena:</mat-label>
+      <input formControlName="cant" matInput/> 
+     
+    </mat-form-field>
 
     <div class="container-text">
     <label class="adjustable-text">Desea que excluir numeros:</label>
