@@ -5,18 +5,18 @@
   </h1>
 
   <form [formGroup]="formContrasena" (ngSubmit)="generatepassword()">
-    <mat-form-field class="mat-form-field" appearance="outline"> <!--esto es de la pagina de mat-angular -->
-      <mat-label>Digite la cantidad de caracteres que desea que tenga la contrasena:</mat-label>
-      <input type="number" formControlName="cant" matInput/> 
+    <mat-form-field  class="mat-form-field" appearance="outline"> 
+      <mat-label>Digite la cantidad de caracteres que desea que tenga la contraseña</mat-label>
+      <input type="number" formControlName="cant" matInput /> 
     </mat-form-field>
     <br>
     <div class="container-text">
-    <label class="adjustable-text">Desea que incluir numeros:</label>
+    <label class="adjustable-text">Desea que incluir números</label>
     <br>
     <mat-slide-toggle (click)="MessageToogle()" color="primary" formControlName="numbers"></mat-slide-toggle>
     <br>
     <br>
-    <label class="adjustable-text">Desea incluir caracteres especiales:</label>
+    <label class="adjustable-text">Desea incluir caracteres especiales</label>
     <br>
     <mat-slide-toggle (click)="MessageToogleSpecial()" color="primary" formControlName="charspecials"></mat-slide-toggle>
     <br>
@@ -25,10 +25,6 @@
     <button class="button-class" type="submit" [disabled]="formContrasena.invalid"> Generar</button>
   </form>
 
-  <!--valida si la contrasena esta vacio para mostrar el mensaje
-  <div *ngIf="Contrasena != ''">
-    <h3>la contrasena es: <span>{{Contrasena}}</span></h3>
-  </div>-->
 </div>
 
 

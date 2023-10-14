@@ -13,32 +13,31 @@ export class AppComponent implements OnInit {
   title = 'GenerarContrasenas';
   formContrasena: FormGroup;
   mostrarModal = false;
-
+  toogleNumbers = false;
+  toogleSpecials = false;
+  Contrasena: string = "";
+  Message: string = "";
+  mostrarModalMessage: boolean = false;
+  Statenumber:boolean = true;
+  StateSpecial:boolean = true;
 
   //llamamos el servicio en el constructor
   constructor(private Services: ServicesService, private fb: FormBuilder, public dialog: MatDialog) 
   {
     //validaciones del form 
     this.formContrasena = this.fb.group({
-    cant: ['', Validators.required],
+    cant: ['', [Validators.required, Validators.min(1)]],
     numbers: [''],
     charspecials: [''],
   });
 
   }
-
-  //variables de los toogles
-
-  toogleNumbers = false;
-  toogleSpecials = false;
-  
-  
+    
 
   ngOnInit(): void {
-    this.toogleSpecials = false;
+
   }
 
-  Contrasena: string = "";
   //funcion que se llama por medio del boton
   generatepassword() {
     //tamaño de la contrasena
@@ -50,8 +49,7 @@ export class AppComponent implements OnInit {
     else
     {
       this.toogleNumbers = true;
-    }
-   
+    }   
     //opcion de caracteres especiales
     this.toogleSpecials = this.formContrasena.value.charspecials;
     if (this.formContrasena.value.charspecials == true) {
@@ -75,17 +73,17 @@ export class AppComponent implements OnInit {
           this.openModal();
           
         } else {
-          console.error('La propiedad "random_password" no está presente en la respuesta de la API.');
+          console.error('"random_password" no está presente en la respuesta de la API.');
+          this.MessageFailConection();
         }
       },
       (error) => {
         console.error('Error: ', error);
+        this.MessageFailConection();
       }
     );
   }
   
-  Message: string = "";
-  mostrarModalMessage: boolean = false;
   openModal(): void {
     this.mostrarModal = true;
   }
@@ -95,29 +93,29 @@ export class AppComponent implements OnInit {
     this.Message = "";
     this.toogleNumbers = false;
     this.toogleSpecials = false;
-    this.formContrasena.value.cant = "";
+    this.formContrasena.reset();
+    
   }
 
-  Statenumber:boolean = true;
   MessageToogle(){
     console.log("change");
     if (this.Statenumber == false) {
-      this.Message = "Su contraseña NO va a incluir numeros";
+      this.Message = "Su contraseña 'NO' va a incluir números";
       this.mostrarModalMessage = true;
       this.Statenumber = true;
     }
     else
     {
-      this.Message = "Su contraseña va a incluir numeros"; 
+      this.Message = "Su contraseña va a incluir números"; 
       this.mostrarModalMessage = true;
       this.Statenumber = false;
     }
   }
 
-  StateSpecial:boolean = true;
+  
   MessageToogleSpecial(){
     if (this.StateSpecial == false) {
-      this.Message = "Su contraseña NO va a incluir caracteres especiales";
+      this.Message = "Su contraseña 'NO' va a incluir caracteres especiales";
       this.mostrarModalMessage = true;
       this.StateSpecial = true;
     }
@@ -127,6 +125,11 @@ export class AppComponent implements OnInit {
       this.mostrarModalMessage = true;
       this.StateSpecial = false;
     }
+  }
+
+  MessageFailConection(){
+    this.Message = "Lo sentimos, no podemos generar una contraseña en este momento.";
+    this.mostrarModalMessage = true;
   }
 
   closeModaltoogle(): void {
