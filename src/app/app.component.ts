@@ -28,13 +28,14 @@ export class AppComponent implements OnInit {
   }
 
   //variables de los toogles
+
   toogleNumbers = false;
   toogleSpecials = false;
   
   
 
   ngOnInit(): void {
-    
+    this.toogleSpecials = false;
   }
 
   Contrasena: string = "";
@@ -54,11 +55,12 @@ export class AppComponent implements OnInit {
     //opcion de caracteres especiales
     this.toogleSpecials = this.formContrasena.value.charspecials;
     if (this.formContrasena.value.charspecials == true) {
-      this.toogleSpecials = false;
+      this.toogleSpecials = false;      
     }
     else
     {
       this.toogleSpecials = true;
+    
     }
     //llamado del servicio que llama a la API
     this.Services.getPass(lengthPassword,this.toogleNumbers, this.toogleSpecials ).subscribe(
@@ -69,6 +71,7 @@ export class AppComponent implements OnInit {
           // busca random_password en el json
           let randomPassword = result['random_password'];
           this.Contrasena = randomPassword;
+          this.Message = "Su contraseña es:";
           this.openModal();
           
         } else {
@@ -82,12 +85,52 @@ export class AppComponent implements OnInit {
   }
   
   Message: string = "";
+  mostrarModalMessage: boolean = false;
   openModal(): void {
     this.mostrarModal = true;
-    this.Message = "Su contraseña es:"
   }
 
   closeModal(): void {
     this.mostrarModal = false;
+    this.Message = "";
+    this.toogleNumbers = false;
+    this.toogleSpecials = false;
+    this.formContrasena.value.cant = "";
+  }
+
+  Statenumber:boolean = true;
+  MessageToogle(){
+    console.log("change");
+    if (this.Statenumber == false) {
+      this.Message = "Su contraseña NO va a incluir numeros";
+      this.mostrarModalMessage = true;
+      this.Statenumber = true;
+    }
+    else
+    {
+      this.Message = "Su contraseña va a incluir numeros"; 
+      this.mostrarModalMessage = true;
+      this.Statenumber = false;
+    }
+  }
+
+  StateSpecial:boolean = true;
+  MessageToogleSpecial(){
+    if (this.StateSpecial == false) {
+      this.Message = "Su contraseña NO va a incluir caracteres especiales";
+      this.mostrarModalMessage = true;
+      this.StateSpecial = true;
+    }
+    else
+    {
+      this.Message = "Su contraseña va a incluir caracteres especiales"; 
+      this.mostrarModalMessage = true;
+      this.StateSpecial = false;
+    }
+  }
+
+  closeModaltoogle(): void {
+    this.mostrarModalMessage = false;
+    this.Message = "";
   }
 }
