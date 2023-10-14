@@ -170,7 +170,8 @@ export class AppComponent implements OnInit {
   const p = valorActual.includes('.');
 
   if (NMA || nme || e || p) {
-    this.Message = "El valor: "+ valorActual + " . No está permitido. Solo se permiten números";
+  const p = valorActual.includes('.');
+    this.Message = `El valor: '${valorActual}' no está permitido. Solo se permiten números`;
     this.mostrarModalMessage = true;
     this.formContrasena.reset();
   }
