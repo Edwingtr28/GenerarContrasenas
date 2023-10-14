@@ -18,8 +18,8 @@ export class AppComponent implements OnInit {
   Contrasena: string = "";
   Message: string = "";
   mostrarModalMessage: boolean = false;
-  Statenumber:boolean = true;
-  StateSpecial:boolean = true;
+  Statenumber:boolean = false;
+  StateSpecial:boolean = false;
 
   //llamamos el servicio en el constructor
   constructor(private Services: ServicesService, private fb: FormBuilder, public dialog: MatDialog) 
@@ -96,34 +96,31 @@ export class AppComponent implements OnInit {
     this.formContrasena.reset();
     
   }
-
+  
   MessageToogle(){
-    console.log("change");
+    this.Statenumber = !this.Statenumber;
     if (this.Statenumber == false) {
       this.Message = "Su contraseña 'NO' va a incluir números";
-      this.mostrarModalMessage = true;
-      this.Statenumber = true;
+      this.mostrarModalMessage = true;  
     }
     else
     {
       this.Message = "Su contraseña va a incluir números"; 
       this.mostrarModalMessage = true;
-      this.Statenumber = false;
     }
   }
 
   
   MessageToogleSpecial(){
+    this.StateSpecial = !this.StateSpecial;
     if (this.StateSpecial == false) {
       this.Message = "Su contraseña 'NO' va a incluir caracteres especiales";
       this.mostrarModalMessage = true;
-      this.StateSpecial = true;
     }
     else
     {
       this.Message = "Su contraseña va a incluir caracteres especiales"; 
       this.mostrarModalMessage = true;
-      this.StateSpecial = false;
     }
   }
 
