@@ -39,6 +39,9 @@
 <!-- Contenido del modal -->
 <ng-container *ngIf="mostrarModal" class="mobile-container">
   <div class="modal-container1">
+    <div class="copy-text">
+      <span mat-raised-button matTooltip="Copiar contraseña" (click)="copyText()" class="material-icons">content_copy</span>
+    </div>
     <div class="container-text">
       <h2 class="text-message"> {{Message}} 
         <div class="scroltext">
@@ -47,6 +50,7 @@
       </h2>
       </div>
     <div>
+    
       <button class="button-classModal" (click)="closeModal()">Cerrar</button>
     </div>
   </div>

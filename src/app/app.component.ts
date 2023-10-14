@@ -2,6 +2,7 @@ import { Component, OnInit,HostListener  } from '@angular/core';
 import { ServicesService } from './Servicios/services.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog} from '@angular/material/dialog';
+import { ClipboardService } from 'ngx-clipboard';
 
 
 @Component({
@@ -28,7 +29,7 @@ export class AppComponent implements OnInit {
     this.checkScreenSize();}
 
   //llamamos el servicio en el constructor
-  constructor(private Services: ServicesService, private fb: FormBuilder, public dialog: MatDialog) 
+  constructor(private Services: ServicesService, private fb: FormBuilder, public dialog: MatDialog, private clipboardService: ClipboardService) 
   {
     //validaciones del form 
     this.formContrasena = this.fb.group({
@@ -144,5 +145,10 @@ export class AppComponent implements OnInit {
   closeModaltoogle(): void {
     this.mostrarModalMessage = false;
     this.Message = "";
+  }
+  
+  // para copiar la clave en el porta papeles
+  copyText() {
+    this.clipboardService.copyFromContent(this.Contrasena);
   }
 }

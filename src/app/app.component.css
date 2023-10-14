@@ -16,6 +16,10 @@
 
   }
 
+  .copy-text {
+    margin-left: 240px
+  }
+
   .mobile-container {
     max-width: 100%;
     margin: 0 auto;
@@ -115,6 +119,28 @@
     text-align: center;
     border: 4px solid #002758;
     border-radius: 10px;
+  }
+
+  .button-classModal {
+    width: 40px; 
+    height: 40px; 
+    border: none; 
+    cursor: pointer;
+    background: #002758;
+    border-color: #002758;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 30px;
+    font-family: Manrope,sans-serif;
+    min-width: 176px;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    font-weight: 700;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 
   .button-classModal {
@@ -241,7 +267,7 @@
     .modal-container1 {
       position: fixed;
       top: 46%;
-      left: 46%;
+      
       transform: translate(-50%, -50%);
       background: white;
       padding: 20px;
@@ -277,5 +303,9 @@
 
     .scroltext {
       overflow-y: auto;
+    }
+
+    .copy-text {
+      margin-left: 130px
     }
   }

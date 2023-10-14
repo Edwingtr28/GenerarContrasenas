@@ -12,6 +12,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -30,7 +32,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatFormFieldModule,
     FormsModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTooltipModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
