@@ -5,10 +5,18 @@
   </h1>
 
   <form [formGroup]="formContrasena" (ngSubmit)="generatepassword()">
-    <mat-form-field  class="mat-form-field" appearance="outline"> 
-      <mat-label>Digite la cantidad de caracteres que desea que tenga la contraseña</mat-label>
-      <input type="number" formControlName="cant" matInput /> 
-    </mat-form-field>
+      <div *ngIf="isMobile === true">
+        <mat-form-field  class="mat-form-field" appearance="outline"> 
+         <mat-label>Digite la cantidad de caracteres</mat-label>
+         <input type="number" formControlName="cant" matInput /> 
+      </mat-form-field>
+      </div>
+      <div *ngIf="isMobile === false">
+        <mat-form-field  class="mat-form-field" appearance="outline"> 
+        <mat-label>Digite la cantidad de caracteres que desea que tenga la contraseña</mat-label>
+        <input type="number" formControlName="cant" matInput /> 
+      </mat-form-field>
+      </div>
     <br>
     <div class="container-text">
     <label class="adjustable-text">Desea que incluir números</label>

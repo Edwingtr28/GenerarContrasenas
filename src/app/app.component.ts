@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,HostListener  } from '@angular/core';
 import { ServicesService } from './Servicios/services.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog} from '@angular/material/dialog';
@@ -20,6 +20,12 @@ export class AppComponent implements OnInit {
   mostrarModalMessage: boolean = false;
   Statenumber:boolean = false;
   StateSpecial:boolean = false;
+  isMobile: boolean = false;
+
+  //evento para saber si esta en mobile
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
+    this.checkScreenSize();}
 
   //llamamos el servicio en el constructor
   constructor(private Services: ServicesService, private fb: FormBuilder, public dialog: MatDialog) 
@@ -32,10 +38,13 @@ export class AppComponent implements OnInit {
   });
 
   }
-    
+   checkScreenSize() {
+    this.isMobile = window.innerWidth < 600; 
+  }
 
   ngOnInit(): void {
-
+    //llama la funcion del mobile de entrada
+    this.checkScreenSize();
   }
 
   //funcion que se llama por medio del boton
