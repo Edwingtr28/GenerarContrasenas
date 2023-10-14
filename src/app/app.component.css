@@ -15,6 +15,11 @@
     border-radius: 10px;
 
   }
+
+  .mobile-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
   
   .generate {
     color: #002758;
@@ -36,6 +41,10 @@
     margin: 0 auto; /* Centrar el texto horizontalmente */
   }
   
+  .scroltext {
+    overflow-y: auto;
+  }
+
   .button-class {
     width: 50px; /* Puedes ajustar el tamaño según tus necesidades */
     height: 50px; /* Asegúrate de que la altura sea igual al ancho para que sea un círculo */
@@ -66,6 +75,11 @@
 
   .mat-form-field {
     width: 100%; 
+  }
+
+  .modal-container {
+    width: 200%; 
+    max-width: 300px; 
   }
   
   .modal-container {
@@ -105,4 +119,116 @@
     margin-right: 5px;
   }
   
+  /* version mobile*/
+  @media screen and (max-width: 600px) {
+    
+    .container {
+      background-color: white;
+    width: 90%;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+    border: 4px solid #002758;
+    border-radius: 10px;
+
+    }
+
+    
+    .generate {
+      color: #002758;
+      text-align: center;
+      font-size: 30px;
+      font-size: 3vw;
+      flex: auto;
+    }
+    
+    .container-text {
+      text-align: center;
+    }
+    
+    .adjustable-text {
+      color: #002758;
+      text-align: center;
+      font-size: 4vw; 
+      max-width: 20em; 
+      margin: 0 auto; 
+    }
+    
+    .button-class {
+      width: 50px; 
+      height: 50px; 
+      border-radius: 50%; 
+      border: none; 
+      cursor: pointer; 
+      background: #46863c;
+      border-color: #46863c;
+      font-size: 16px;
+      line-height: 24px;
+      border-radius: 30px;
+      font-family: Manrope,sans-serif;
+      min-width: 176px;
+      padding: 10px;
+      color: #fff;
+      text-decoration: none;
+      display: inline-flex;
+      justify-content: center;
+      font-weight: 700;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    
+    .button-class:disabled {
+      background-color: #ccc; 
+      color: #666; 
+    }
   
+    .mat-form-field {
+      width: 100%; 
+    }
+    
+    .modal-container {
+      width: 50%; 
+      max-width: 300px; 
+    }
+
+    .modal-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+  
+      text-align: center;
+      border: 4px solid #002758;
+      border-radius: 10px;
+    }
+  
+    .button-classModal {
+      width: 30px; 
+      height: 30px; 
+      border: none; 
+      cursor: pointer;
+      background: #002758;
+      border-color: #002758;
+      font-size: 12px;
+      line-height: 15px;
+      border-radius: 20px;
+      font-family: Manrope,sans-serif;
+      min-width: 100px;
+      padding: 10px;
+      color: #fff;
+      text-decoration: none;
+      display: inline-flex;
+      justify-content: center;
+      font-weight: 700;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    .scroltext {
+      overflow-y: auto;
+    }
+  }

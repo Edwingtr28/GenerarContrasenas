@@ -1,5 +1,5 @@
 <!--form de para obtener la contrasena-->
-<div class="container">
+<div class="container mobile-container">
   <h1 class="generate">
     <strong>Generador de Contraseñas</strong>
   </h1>
@@ -29,11 +29,13 @@
 
 
 <!-- Contenido del modal -->
-<ng-container *ngIf="mostrarModal">
+<ng-container *ngIf="mostrarModal" class="mobile-container">
   <div class="modal-container">
     <div class="container-text">
       <h2> {{Message}} 
-      <span>{{Contrasena}}</span>
+        <div class="scroltext">
+          <span>{{Contrasena}}</span>
+        </div>
       </h2>
       </div>
     <div>
@@ -43,7 +45,7 @@
 </ng-container>
 
 <!-- Contenido del modal -->
-<ng-container *ngIf="mostrarModalMessage">
+<ng-container *ngIf="mostrarModalMessage" class="mobile-container">
   <div class="modal-container">
     <div class="container-text">
       <h2> {{Message}} 
