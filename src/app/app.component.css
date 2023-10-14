@@ -145,6 +145,11 @@
     .container-text {
       text-align: center;
     }
+
+    .text-message{
+      font-size: 4vw; 
+      max-width: 20em;
+    }
     
     .adjustable-text {
       color: #002758;
@@ -189,12 +194,34 @@
     .modal-container {
       width: 50%; 
       max-width: 300px; 
+      position: fixed;
     }
 
     .modal-container {
       position: fixed;
       top: 50%;
       left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+  
+      text-align: center;
+      border: 4px solid #002758;
+      border-radius: 10px;
+    }
+
+    .modal-container1 {
+      width: 50%; 
+      max-width: 300px; 
+      position: fixed;
+    }
+
+    .modal-container1 {
+      position: fixed;
+      top: 46%;
+      left: 46%;
       transform: translate(-50%, -50%);
       background: white;
       padding: 20px;
