@@ -31,6 +31,7 @@ export class AppComponent implements OnInit {
   toogleNumbers = false;
   toogleSpecials = false;
   
+  
 
   ngOnInit(): void {
     
@@ -42,10 +43,23 @@ export class AppComponent implements OnInit {
     //tamaño de la contrasena
     const lengthPassword = this.formContrasena.value.cant;
     //opcion de numeros
-    this.toogleNumbers = this.formContrasena.value.numbers;
-    console.log("se llamo number:", this.toogleNumbers);
+    if (this.formContrasena.value.numbers == true) {
+      this.toogleNumbers = false;
+    }
+    else
+    {
+      this.toogleNumbers = true;
+    }
+   
     //opcion de caracteres especiales
     this.toogleSpecials = this.formContrasena.value.charspecials;
+    if (this.formContrasena.value.charspecials == true) {
+      this.toogleSpecials = false;
+    }
+    else
+    {
+      this.toogleSpecials = true;
+    }
     //llamado del servicio que llama a la API
     this.Services.getPass(lengthPassword,this.toogleNumbers, this.toogleSpecials ).subscribe(
       (result) => {
@@ -67,8 +81,10 @@ export class AppComponent implements OnInit {
     );
   }
   
+  Message: string = "";
   openModal(): void {
     this.mostrarModal = true;
+    this.Message = "Su contraseña es:"
   }
 
   closeModal(): void {
