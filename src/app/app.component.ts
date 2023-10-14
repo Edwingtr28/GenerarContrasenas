@@ -153,7 +153,7 @@ export class AppComponent implements OnInit {
   copyText() {
     this.clipboardService.copyFromContent(this.Contrasena);
     //mensaje de texto copiado
-    this.snackBar.open("contraseña copiada", "cerrar", {
+    this.snackBar.open("Contraseña copiada", "cerrar", {
       duration: 2000,
       horizontalPosition: 'center',
       verticalPosition: 'top', 
@@ -169,12 +169,12 @@ export class AppComponent implements OnInit {
   const e = valorActual.includes('e');
   const C = valorActual.includes('0');
   if (NMA || nme || e) {
-    this.Message = "El valor: "+ valorActual + " No  esta permitido. Solo se permiten numeros";
+    this.Message = "El valor: "+ valorActual + " . No está permitido. Solo se permiten números";
     this.mostrarModalMessage = true;
     this.formContrasena.reset();
   }
   if (C) {
-    this.Message = "la cantidad debe ser mayor a "+ valorActual;
+    this.Message = "La cantidad debe ser mayor a: "+ valorActual;
     this.mostrarModalMessage = true;
     this.formContrasena.reset();
   }
