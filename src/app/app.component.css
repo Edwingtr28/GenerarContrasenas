@@ -97,6 +97,26 @@
     border-radius: 10px;
   }
 
+  .modal-container1 {
+    width: 200%; 
+    max-width: 300px; 
+  }
+
+  .modal-container1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+
+    text-align: center;
+    border: 4px solid #002758;
+    border-radius: 10px;
+  }
+
   .button-classModal {
     width: 40px; 
     height: 40px; 
