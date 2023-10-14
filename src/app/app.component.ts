@@ -167,10 +167,16 @@ export class AppComponent implements OnInit {
   const NMA = valorActual.includes('+');
   const nme = valorActual.includes('-');
   const e = valorActual.includes('e');
+  const C = valorActual.includes('0');
   if (NMA || nme || e) {
-    console.log('Se ha clickeado un "+"');
     this.Message = "El valor: "+ valorActual + " No  esta permitido. Solo se permiten numeros";
     this.mostrarModalMessage = true;
+    this.formContrasena.reset();
+  }
+  if (C) {
+    this.Message = "la cantidad debe ser mayor a "+ valorActual;
+    this.mostrarModalMessage = true;
+    this.formContrasena.reset();
   }
   }
 
