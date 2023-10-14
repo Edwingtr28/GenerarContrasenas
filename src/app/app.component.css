@@ -48,7 +48,7 @@
   .scroltext {
     overflow-y: auto;
   }
-
+ 
   .button-class {
     width: 50px; /* Puedes ajustar el tamaño según tus necesidades */
     height: 50px; /* Asegúrate de que la altura sea igual al ancho para que sea un círculo */
@@ -306,6 +306,6 @@
     }
 
     .copy-text {
-      margin-left: 130px
+      margin-left: auto;
     }
   }

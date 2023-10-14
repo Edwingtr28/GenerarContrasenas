@@ -3,6 +3,7 @@ import { ServicesService } from './Servicios/services.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog} from '@angular/material/dialog';
 import { ClipboardService } from 'ngx-clipboard';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -29,7 +30,8 @@ export class AppComponent implements OnInit {
     this.checkScreenSize();}
 
   //llamamos el servicio en el constructor
-  constructor(private Services: ServicesService, private fb: FormBuilder, public dialog: MatDialog, private clipboardService: ClipboardService) 
+  constructor(private Services: ServicesService, private fb: FormBuilder, public dialog: MatDialog, 
+    private clipboardService: ClipboardService, private snackBar: MatSnackBar) 
   {
     //validaciones del form 
     this.formContrasena = this.fb.group({
@@ -150,5 +152,26 @@ export class AppComponent implements OnInit {
   // para copiar la clave en el porta papeles
   copyText() {
     this.clipboardService.copyFromContent(this.Contrasena);
+    //mensaje de texto copiado
+    this.snackBar.open("contraseña copiada", "cerrar", {
+      duration: 2000,
+      horizontalPosition: 'center',
+      verticalPosition: 'top', 
+      panelClass: ['blue-snackbar']
+    });
   }
+
+  //evento para determinar si lleva un caracter
+  onInputChange(event: any): void {
+    const valorActual = event.data;
+  const NMA = valorActual.includes('+');
+  const nme = valorActual.includes('-');
+  const e = valorActual.includes('e');
+  if (NMA || nme || e) {
+    console.log('Se ha clickeado un "+"');
+    this.Message = "El valor: "+ valorActual + " No  esta permitido. Solo se permiten numeros";
+    this.mostrarModalMessage = true;
+  }
+  }
+
 }
