@@ -94,6 +94,8 @@ export class AppComponent implements OnInit {
     this.toogleNumbers = false;
     this.toogleSpecials = false;
     this.formContrasena.reset();
+    this.StateSpecial = false;
+    this.Statenumber = false;
     
   }
   
