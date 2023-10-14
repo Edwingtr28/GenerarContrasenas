@@ -63,7 +63,7 @@ export class AppComponent implements OnInit {
     //llamado del servicio que llama a la API
     this.Services.getPass(lengthPassword,this.toogleNumbers, this.toogleSpecials ).subscribe(
       (result) => {
-        console.log(result);
+       // console.log(result);
         //aqui obtenemos la respuesta y buscamos la clave para guardarlo en la variable contrasena y mostrarlo en html
         if ('random_password' in result) {
           // busca random_password en el json
@@ -84,6 +84,7 @@ export class AppComponent implements OnInit {
     );
   }
   
+  //modales y mensajes
   openModal(): void {
     this.mostrarModal = true;
   }
