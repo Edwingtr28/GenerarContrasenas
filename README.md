@@ -1,5 +1,5 @@
 # Introducción:
-Esta aplicacion web se encarga de generar contraseñas aleatorias con base a las opciones que el usuario
+Esta desarrollada con el lenguaje de Angular y la aplicacion web se encarga de generar contraseñas aleatorias con base a las opciones que el usuario
 desee habilitar como la longitud, carateres numericos y especiales para la contraseña.
 
 # Instalación:
@@ -93,10 +93,14 @@ Una vez que el sistema copiara la contraseña, el sistema mostrara en la parte s
 ![Alt text](ImgReadme/copiarmensaje.png).
 Este mensaje se cerrara automaticamente en 2 segundos o bien puede presionar cerrar.
 
+- Mensaje de error en caso de fallo:
+En caso de que la aplicacion tenga problemas con el consumo de la API o de conexion, el sistema nos mostrara el siguiente mensaje:
+![Alt text](ImgReadme/mensajeAPI.png)
+Adicionalmente en la consola del navegador apareceran los errores reportados.
 
-
-
-
+- Cerrar mensajes:
+en cada mensaje que se muestra en la aplicacion, aparecera un boton como el que se muestra a continuacion el cual nos permite cerrar el mensaje.
+![Alt text](ImgReadme/btncerrar.png).
 
 
 
