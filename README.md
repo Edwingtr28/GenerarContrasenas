@@ -86,8 +86,11 @@ El sistema está configurado para que por defecto la contraseña no contenga car
 ![Alt text](ImgReadme/switch.png). Si al momento de querer generar una contraseña no cambiamos o interactuamos con este switch y presionamos el botón "Generar", el sistema procederá a generar la contraseña sin la posibilidad de que los caracteres especiales sean tomados en cuenta.
 
 Si deseamos que la contraseña contenga caracteres especiales, debemos de dar un clic al switch y deberá de quedar de la siguiente forma:
+
 ![Alt text](ImgReadme/especialMP.png)
+
 Una vez seleccionado el sistema nos mostrará el siguiente mensaje:
+
 ![Alt text](ImgReadme/EspecialesM.png)
 
 Si cambiamos de parecer y "NO" deseamos que la contraseña contenga caracteres especiales después de haber interactuado con el switch, debemos de cambiar el switch y dejarlo de la siguiente forma:
@@ -124,6 +127,7 @@ Adicionalmente, en la consola del navegador aparecerán los errores reportados.
 
 - Cerrar mensajes:
 En cada mensaje que se muestra en la aplicación, aparecerá un botón como el que se muestra a continuación, el cual nos permite cerrar el mensaje.
+
 ![Alt text](ImgReadme/btncerrar.png).
 
 
