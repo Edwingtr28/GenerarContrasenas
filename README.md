@@ -96,6 +96,7 @@ Una vez seleccionado el sistema nos mostrará el siguiente mensaje:
 Si cambiamos de parecer y "NO" deseamos que la contraseña contenga caracteres especiales después de haber interactuado con el switch, debemos de cambiar el switch y dejarlo de la siguiente forma:
 ![Alt text](ImgReadme/especialesP.png)
 Una vez seleccionado el sistema nos mostrará el siguiente mensaje:
+
 ![Alt text](ImgReadme/MensajesPS.png)
 
 -Generando la contraseña:
