@@ -7,8 +7,9 @@ Para poder ejecutar esta aplicación localmente es necesario instalar:
 - Angular CLI: 16.
 - Visual Studio code.
 
-Así como también instalar la extensión Angular Language Service v16.1.8.
-Y las siguientes librerías:
+Así como también instalar la extensión Angular Language Service v16.1.8 una vez que se instale el visual studio code. Esta extension la podemos descargar en la parte de extenciones y la buscamos en el buscador del visual studio code.
+ 
+Las siguientes librerías se utilizaron para crear la aplicacion:
 - ClipboardModule(npm install ngx-clipboard).
 - Angular Material(ng add @angular/material).
 - Bootstrap(npm install bootstrap).
@@ -33,7 +34,7 @@ Y las siguientes librerías:
     "zone.js": "~0.13.0"
 
 # Ejecución local:
-Para ejecutar localmente la aplicación, es necesario abrir el proyecto en visual studio y en una terminal ejecutar el comando "npm install". Luego, para abrir una ventana del navegador, en la misma terminal colocamos el codigo "ng s". Con esto el sistema nos indicará en qué local host está el proyecto disponible, como por ejemplo "http://localhost:4200/".
+Para ejecutar localmente la aplicación, es necesario abrir el proyecto en visual studio code. Cuando el proyecto este abierto en visual studio code, en una terminal ejecutamos el comando "npm install". Luego, para abrir una ventana del navegador, en la misma terminal colocamos el codigo "ng s". Con esto el sistema nos indicará en qué local host está el proyecto disponible, como por ejemplo "http://localhost:4200/".
 
 # Manual de la aplicacion:
 Una vez que ejecutamos la aplicación localmente, el navegador nos mostrara la siguiente ventana:
