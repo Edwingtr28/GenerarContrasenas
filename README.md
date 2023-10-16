@@ -117,6 +117,7 @@ Si queremos copiar la contraseña, podemos presionar el siguiente icono marcado 
 ![Alt text](ImgReadme/btnCopiar.png)
 
 Como ayuda visual, al momento de posesionarnos sobre el icono de copiar, el sistema nos mostrara la leyenda "Copiar contraseña" como se muestra en la siguiente imagen:
+
 ![Alt text](ImgReadme/copiarcontra.png).
 
 Nota: la contraseña se guardará en el portapapeles, por lo que si desea puede copiarla o guardarla en su lugar de preferencia.
