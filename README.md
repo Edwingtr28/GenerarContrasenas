@@ -45,7 +45,7 @@ si deseamos que la contraseña lleve caracteres especiales como: !,@,(,) entre o
 
 Importante tener en cuenta que las opciones de caracteres especiales y números, el sistema los tomara en cuenta para generar la contraseña al azar. Esto significa que cabe la posibilidad de que la contraseña, aunque marquemos esta opción, no contenga estos caracteres o números porque se generan aleatoriamente. 
 
-- Agregando la cantidad o longitud de caracteres:
+# Agregando la cantidad o longitud de caracteres:
 Como se muestra en la imagen, en el campo con la leyenda "Digite la cantidad de caracteres que desea   que tenga la contraseña", podemos digitar la cantidad de caracteres que queremos que se generen en la contraseña. En este caso voy a colocar una contraseña con la cantidad de 5 caracteres, ver imagen a continuación:
 ![Alt text](ImgReadme/cantidad.png).
 
@@ -55,12 +55,12 @@ Una vez que se digite correctamente la cantidad de caracteres, el sistema nos ha
 ![Alt text](ImgReadme/btnvalido.png).
 
 
-- Validaciones de la cantidad de caracteres:
+# Validaciones de la cantidad de caracteres:
 Este campo contiene validaciones las cuales se van a detallar a continuación:
 
 1- Si no se digita un número, el campo se pondrá en rojo y no habilitará el botón de generar. El botón se mostrará en color gris hasta que cumpla con los requisitos, ver imagen a continuación.
 
-![Alt text](ImgReadme/cantVacio.png):
+![Alt text](ImgReadme/cantVacio.png)
 
 2- El primer número debe de ser mayor a 0. En caso de que coloquemos un 0 de entrada, el sistema nos mostrara el siguiente mensaje:
 
@@ -74,7 +74,7 @@ Este campo contiene validaciones las cuales se van a detallar a continuación:
 
 ![Alt text](ImgReadme/cant+-e.png).
 
-- Escogiendo números en la contraseña:
+# Escogiendo números en la contraseña:
 El sistema está configurado para que por defecto la contraseña no contenga números, por lo que nos mostrara el switch de la forma siguiente forma:
 
 ![Alt text](ImgReadme/switch.png). 
@@ -97,7 +97,7 @@ Una vez seleccionado el sistema nos mostrará el siguiente mensaje:
 
 ![Alt text](ImgReadme/mensajeS.png).
 
-- Escogiendo caracteres especiales en la contraseña:
+# Escogiendo caracteres especiales en la contraseña:
 El sistema está configurado para que por defecto la contraseña no contenga caracteres especiales, por lo que nos mostrara el switch de la forma siguiente forma:
 ![Alt text](ImgReadme/switch.png). Si al momento de querer generar una contraseña no cambiamos o interactuamos con este switch y presionamos el botón "Generar", el sistema procederá a generar la contraseña sin la posibilidad de que los caracteres especiales sean tomados en cuenta.
 
@@ -142,14 +142,14 @@ Una vez que el sistema copie la contraseña, el sistema mostrara en la parte sup
 ![Alt text](ImgReadme/copiarmensaje.png).
 Este mensaje se cerrará automáticamente en 2 segundos o bien puede presionar cerrar.
 
-- Mensaje de error en caso de fallo:
+# Mensaje de error en caso de fallo:
 En caso de que la aplicación tenga problemas con el consumo de la API o de conexión, el sistema nos mostrara el siguiente mensaje:
 
 ![Alt text](ImgReadme/mensajeAPI.png)
 
 Adicionalmente, en la consola del navegador aparecerán los errores reportados.
 
-- Cerrar mensajes:
+# Cerrar mensajes:
 En cada mensaje que se muestra en la aplicación, aparecerá un botón como el que se muestra a continuación, el cual nos permite cerrar el mensaje.
 
 ![Alt text](ImgReadme/btncerrar.png).
