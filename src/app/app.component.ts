@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
   {
     //validaciones del form 
     this.formContrasena = this.fb.group({
-    cant: ['', [Validators.required, Validators.min(1)]],
+    cant: ['', [Validators.required, Validators.min(1), Validators.max(50)]],
     numbers: [''],
     charspecials: [''],
   });
@@ -177,6 +177,11 @@ export class AppComponent implements OnInit {
   }
   if (parseInt(this.formContrasena.value.cant) <= 0) {
     this.Message = "La cantidad debe ser mayor a: "+ valorActual;
+    this.mostrarModalMessage = true;
+    this.formContrasena.reset();
+  }
+  if (parseInt(this.formContrasena.value.cant) > 50) {
+    this.Message = "La cantidad debe ser menor a: 50" ;
     this.mostrarModalMessage = true;
     this.formContrasena.reset();
   }

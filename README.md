@@ -58,7 +58,9 @@ Este campo contiene validaciones las cuales se van a detallar a continuación:
 ![Alt text](ImgReadme/cantVacio.png):
 2- El primer número debe de ser mayor a 0. En caso de que coloquemos un 0 de entrada, el sistema nos mostrara el siguiente mensaje:
 ![Alt text](ImgReadme/cant0.png).
-3- El sistema no permitirá que se coloquen los siguientes caracteres: "+, -, . y e". Si se colocan nos mostrará el siguiente mensaje:
+3- La cantidad maxima de caracteres permita es 50. si colocamos una cantidad mayor a 50 el sistema nos mostrara lo siguiente:
+![Alt text](ImgReadme/max.png)
+4- El sistema no permitirá que se coloquen los siguientes caracteres: "+, -, . y e". Si se colocan nos mostrará el siguiente mensaje:
 ![Alt text](ImgReadme/cant+-e.png).
 
 - Escogiendo números en la contraseña:
