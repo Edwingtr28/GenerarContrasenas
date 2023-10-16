@@ -67,11 +67,13 @@ El sistema está configurado para que por defecto la contraseña no contenga nú
 
 Si deseamos que la contraseña contenga números, debemos de dar un clic al switch y deberá de quedar de la siguiente forma:
 ![Alt text](ImgReadme/numerosP.png).
+
 Una vez seleccionado el sistema nos mostrará el siguiente mensaje:
 ![Alt text](ImgReadme/mensajeN.png).
 
 Si cambiamos de parecer y "NO" deseamos que la contraseña contenga números después de haber interactuado con el switch, debemos de cambiar el switch y dejarlo de la siguiente forma:
 ![Alt text](ImgReadme/numerosS.png).
+
 Una vez seleccionado el sistema nos mostrará el siguiente mensaje:
 ![Alt text](ImgReadme/mensajeS.png).
 
