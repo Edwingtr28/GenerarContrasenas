@@ -95,10 +95,13 @@ Una vez que escogemos las opciones que deseamos y la longitud de la contraseña,
 La contraseña generada es la que esta en el cuadro en rojo de la siguiente imagen:
 ![Alt text](ImgReadme/cuadroContra.png)
 
+Si al momento de escoger una cantidad de caracteres muy grande, el sistema habilitara una barra para qué podemos ver por completo la contraseña generada como aparece en la siguiente imagen:
+![Alt text](ImgReadme/barra.png).
+
 Si queremos copiar la contraseña, podemos presionar el siguiente icono marcado en rojo de la siguiente imagen:
 ![Alt text](ImgReadme/btnCopiar.png)
 
- Como ayuda visual, al momento de posesionarnos sobre el icono de copiar, el sistema nos mostrara la leyenda "Copiar contraseña" como se muestra en la siguiente imagen:
+Como ayuda visual, al momento de posesionarnos sobre el icono de copiar, el sistema nos mostrara la leyenda "Copiar contraseña" como se muestra en la siguiente imagen:
 ![Alt text](ImgReadme/copiarcontra.png).
 
 Nota: la contraseña se guardará en el portapapeles, por lo que si desea puede copiarla o guardarla en su lugar de preferencia.
@@ -118,31 +121,3 @@ En cada mensaje que se muestra en la aplicación, aparecerá un botón como el q
 
 
 
-Notas generadad por el sistema
-# GenerarContrasenas
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.2.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
