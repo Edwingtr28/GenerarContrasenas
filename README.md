@@ -117,7 +117,7 @@ Una vez seleccionado el sistema nos mostrará el siguiente mensaje:
 
 ![Alt text](ImgReadme/MensajesPS.png)
 
--Generando la contraseña:
+# Generando la contraseña:
 Una vez que escogemos las opciones que deseamos y la longitud de la contraseña, procedemos con presionar el botón de "Generar" ![Alt text](ImgReadme/btnVerde.png)
 , para que el sistema nos genere la contraseña y nos mostrara la contraseña en el siguiente mensaje:
 
