@@ -7,14 +7,14 @@ Para poder desarrollar esta aplicación es necesario instalar:
 - Angular CLI: 16.
 - Visual Studio code.
 
-Así como también instalar la extensión Angular Language Service v16.1.8 una vez que se instale el visual studio code. Esta extension la podemos descargar en la parte de extenciones y la buscamos en el buscador del visual studio code.
+Así como también instalar la extensión Angular Language Service v16.1.8, una vez que se instale el visual studio code. Esta extension la podemos descargar en la parte de extenciones y la buscamos en el buscador del visual studio code.
  
 Las siguientes librerías se utilizaron para crear la aplicacion:
 - ClipboardModule(npm install ngx-clipboard).
 - Angular Material(ng add @angular/material).
 - Bootstrap(npm install bootstrap).
 
-# Verisones del proyecto
+# Versiones del proyecto
 "@angular/animations": "^16.1.0",
     "@angular/cdk": "^16.2.8",
     "@angular/common": "^16.1.0",
