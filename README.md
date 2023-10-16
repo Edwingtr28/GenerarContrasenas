@@ -51,26 +51,34 @@ Como se muestra en la imagen, en el campo con la leyenda "Digite la cantidad de 
 
 
 Una vez que se digite correctamente la cantidad de caracteres, el sistema nos habilitara el botón de generar como se muestra en la siguiente imagen:
+
 ![Alt text](ImgReadme/btnvalido.png).
 
 
 - Validaciones de la cantidad de caracteres:
 Este campo contiene validaciones las cuales se van a detallar a continuación:
 1- Si no se digita un número, el campo se pondrá en rojo y no habilitará el botón de generar. El botón se mostrará en color gris hasta que cumpla con los requisitos, ver imagen a continuación.
+
 ![Alt text](ImgReadme/cantVacio.png):
 
 2- El primer número debe de ser mayor a 0. En caso de que coloquemos un 0 de entrada, el sistema nos mostrara el siguiente mensaje:
+
 ![Alt text](ImgReadme/cant0.png).
 
 3- La cantidad máxima de caracteres permita es 50. Sí colocamos una cantidad mayor a 50 el sistema nos mostrará el siguiente mensaje:
+
 ![Alt text](ImgReadme/max.png)
 
 4- El sistema no permitirá que se coloquen los siguientes caracteres: "+, -, . y e". Si se colocan nos mostrará el siguiente mensaje:
+
 ![Alt text](ImgReadme/cant+-e.png).
 
 - Escogiendo números en la contraseña:
 El sistema está configurado para que por defecto la contraseña no contenga números, por lo que nos mostrara el switch de la forma siguiente forma:
-![Alt text](ImgReadme/switch.png). Si al momento de querer generar una contraseña no cambiamos o interactuamos con este switch y presionamos el botón "Generar", el sistema procederá a generar la contraseña sin la posibilidad de que los números sean tomados en cuenta.
+
+![Alt text](ImgReadme/switch.png). 
+
+Si al momento de querer generar una contraseña no cambiamos o interactuamos con este switch y presionamos el botón "Generar", el sistema procederá a generar la contraseña sin la posibilidad de que los números sean tomados en cuenta.
 
 Si deseamos que la contraseña contenga números, debemos de dar un clic al switch y deberá de quedar de la siguiente forma:
 
