@@ -16,6 +16,7 @@ export class ServicesService {
     try {
       // se forma por completo la direccion con los parametros
       const url = `${this.apiUrl}?length=${length}&exclude_numbers=${number}&exclude_special_chars=${special}`;
+      //coloca la contraseña para poder utilizar la API
       const headers = new HttpHeaders().set('X-Api-Key', this.apiKey);
   
       //retorna la contraseña generada

@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
   onResize(event: Event): void {
     this.checkScreenSize();}
 
-  //llamamos el servicio en el constructor
+  //llamamos el servicio en el constructor y otras librerias necesarias
   constructor(private Services: ServicesService, private fb: FormBuilder, public dialog: MatDialog, 
     private clipboardService: ClipboardService, private snackBar: MatSnackBar) 
   {
@@ -40,6 +40,7 @@ export class AppComponent implements OnInit {
     charspecials: [''],
   });
 
+  //define el tamaño para saber cuando es mobile
   }
    checkScreenSize() {
     this.isMobile = window.innerWidth < 600; 
@@ -50,7 +51,7 @@ export class AppComponent implements OnInit {
     this.checkScreenSize();
   }
 
-  //funcion que se llama por medio del boton
+  //funcion que se llama por medio del boton generar
   generatepassword() {
     //tamaño de la contrasena
     const lengthPassword = this.formContrasena.value.cant;
@@ -75,7 +76,6 @@ export class AppComponent implements OnInit {
     //llamado del servicio que llama a la API
     this.Services.getPass(lengthPassword,this.toogleNumbers, this.toogleSpecials ).subscribe(
       (result) => {
-       // console.log(result);
         //aqui obtenemos la respuesta y buscamos la clave para guardarlo en la variable contrasena y mostrarlo en html
         if ('random_password' in result) {
           // busca random_password en el json
