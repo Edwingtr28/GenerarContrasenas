@@ -128,7 +128,9 @@ Este mensaje se cerrará automáticamente en 2 segundos o bien puede presionar c
 
 - Mensaje de error en caso de fallo:
 En caso de que la aplicación tenga problemas con el consumo de la API o de conexión, el sistema nos mostrara el siguiente mensaje:
+
 ![Alt text](ImgReadme/mensajeAPI.png)
+
 Adicionalmente, en la consola del navegador aparecerán los errores reportados.
 
 - Cerrar mensajes:
