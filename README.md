@@ -57,6 +57,7 @@ Una vez que se digite correctamente la cantidad de caracteres, el sistema nos ha
 
 - Validaciones de la cantidad de caracteres:
 Este campo contiene validaciones las cuales se van a detallar a continuación:
+
 1- Si no se digita un número, el campo se pondrá en rojo y no habilitará el botón de generar. El botón se mostrará en color gris hasta que cumpla con los requisitos, ver imagen a continuación.
 
 ![Alt text](ImgReadme/cantVacio.png):
