@@ -2,7 +2,7 @@
 Está aplicación web esta desarrollada con el lenguaje de Angular y  se encarga de generar contraseñas aleatorias con base a las opciones que el usuario desee habilitar como la longitud, caracteres numéricos y especiales para la contraseña.
 
 # Instalación:
-Para poder ejecutar esta aplicación localmente es necesario instalar:
+Para poder desarrollar esta aplicación es necesario instalar:
 - Node.js v18.
 - Angular CLI: 16.
 - Visual Studio code.
