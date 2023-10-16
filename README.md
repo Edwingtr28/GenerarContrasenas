@@ -64,6 +64,7 @@ Este campo contiene validaciones las cuales se van a detallar a continuación:
 
 3- La cantidad máxima de caracteres permita es 50. Sí colocamos una cantidad mayor a 50 el sistema nos mostrará el siguiente mensaje:
 ![Alt text](ImgReadme/max.png)
+
 4- El sistema no permitirá que se coloquen los siguientes caracteres: "+, -, . y e". Si se colocan nos mostrará el siguiente mensaje:
 ![Alt text](ImgReadme/cant+-e.png).
 
