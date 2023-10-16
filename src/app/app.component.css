@@ -40,9 +40,9 @@
   .adjustable-text {
     color: #002758;
     text-align: center;
-    font-size: 2vw; /* Ajustado al ancho de la ventana */
-    max-width: 20em; /* Evitar que el texto crezca demasiado en pantallas grandes */
-    margin: 0 auto; /* Centrar el texto horizontalmente */
+    font-size: 2vw; 
+    max-width: 20em; 
+    margin: 0 auto; 
   }
   
   .scroltext {
@@ -50,11 +50,11 @@
   }
  
   .button-class {
-    width: 50px; /* Puedes ajustar el tamaño según tus necesidades */
-    height: 50px; /* Asegúrate de que la altura sea igual al ancho para que sea un círculo */
-    border-radius: 50%; /* Establece las esquinas redondeadas al 50% para hacer un círculo */
-    border: none; /* Elimina el borde para que sea completamente redondo */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    border: none; 
+    cursor: pointer; 
     background: #46863c;
     border-color: #46863c;
     font-size: 16px;
@@ -73,8 +73,8 @@
   }
   
   .button-class:disabled {
-    background-color: #ccc; /* Color de fondo cuando está deshabilitado */
-    color: #666; /* Color del texto cuando está deshabilitado */
+    background-color: #ccc; 
+    color: #666; 
   }
 
   .mat-form-field {
@@ -82,7 +82,7 @@
   }
 
   .mat-label {
-    font-size: 11px; /* Puedes ajustar el tamaño de la fuente según tus necesidades */
+    font-size: 11px; 
   }
 
   .modal-container {

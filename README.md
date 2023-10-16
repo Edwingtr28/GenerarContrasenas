@@ -49,15 +49,19 @@ Importante tener en cuenta que las opciones de caracteres especiales y números,
 Como se muestra en la imagen, en el campo con la leyenda "Digite la cantidad de caracteres que desea   que tenga la contraseña", podemos digitar la cantidad de caracteres que queremos que se generen en la contraseña. En este caso voy a colocar una contraseña con la cantidad de 5 caracteres, ver imagen a continuación:
 ![Alt text](ImgReadme/cantidad.png).
 
+
 Una vez que se digite correctamente la cantidad de caracteres, el sistema nos habilitara el botón de generar como se muestra en la siguiente imagen:
 ![Alt text](ImgReadme/btnvalido.png).
+
 
 - Validaciones de la cantidad de caracteres:
 Este campo contiene validaciones las cuales se van a detallar a continuación:
 1- Si no se digita un número, el campo se pondrá en rojo y no habilitará el botón de generar. El botón se mostrará en color gris hasta que cumpla con los requisitos, ver imagen a continuación.
 ![Alt text](ImgReadme/cantVacio.png):
+
 2- El primer número debe de ser mayor a 0. En caso de que coloquemos un 0 de entrada, el sistema nos mostrara el siguiente mensaje:
 ![Alt text](ImgReadme/cant0.png).
+
 3- La cantidad máxima de caracteres permita es 50. Sí colocamos una cantidad mayor a 50 el sistema nos mostrará el siguiente mensaje:
 ![Alt text](ImgReadme/max.png)
 4- El sistema no permitirá que se coloquen los siguientes caracteres: "+, -, . y e". Si se colocan nos mostrará el siguiente mensaje:
