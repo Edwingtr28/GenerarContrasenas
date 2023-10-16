@@ -66,15 +66,19 @@ El sistema está configurado para que por defecto la contraseña no contenga nú
 ![Alt text](ImgReadme/switch.png). Si al momento de querer generar una contraseña no cambiamos o interactuamos con este switch y presionamos el botón "Generar", el sistema procederá a generar la contraseña sin la posibilidad de que los números sean tomados en cuenta.
 
 Si deseamos que la contraseña contenga números, debemos de dar un clic al switch y deberá de quedar de la siguiente forma:
+
 ![Alt text](ImgReadme/numerosP.png).
 
 Una vez seleccionado el sistema nos mostrará el siguiente mensaje:
+
 ![Alt text](ImgReadme/mensajeN.png).
 
 Si cambiamos de parecer y "NO" deseamos que la contraseña contenga números después de haber interactuado con el switch, debemos de cambiar el switch y dejarlo de la siguiente forma:
+
 ![Alt text](ImgReadme/numerosS.png).
 
 Una vez seleccionado el sistema nos mostrará el siguiente mensaje:
+
 ![Alt text](ImgReadme/mensajeS.png).
 
 - Escogiendo caracteres especiales en la contraseña:
