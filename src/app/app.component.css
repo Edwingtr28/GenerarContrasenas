@@ -81,6 +81,10 @@
     width: 100%; 
   }
 
+  .mat-label {
+    font-size: 11px; /* Puedes ajustar el tamaño de la fuente según tus necesidades */
+  }
+
   .modal-container {
     width: 200%; 
     max-width: 300px; 
@@ -164,6 +168,7 @@
     margin-left: 5px;
     margin-right: 5px;
   }
+
   
   /* version mobile*/
   @media screen and (max-width: 600px) {
