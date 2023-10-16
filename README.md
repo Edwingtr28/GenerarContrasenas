@@ -54,6 +54,7 @@ Una vez que se digite correctamente la cantidad de caracteres, el sistema nos ha
 
 ![Alt text](ImgReadme/btnvalido.png).
 
+El sistema solo aceptar números. Si colocamos una letra no se registrará en el campo.
 
 # Validaciones de la cantidad de caracteres:
 Este campo contiene validaciones las cuales se van a detallar a continuación:
